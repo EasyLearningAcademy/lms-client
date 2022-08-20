@@ -1,0 +1,81 @@
+.container{
+    margin: 130px auto;
+    width: 60%;
+}
+
+.row{
+    height: 500px;
+}
+
+
+#left{
+    background-image: url(/assets/images/blog/blog_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+    
+}
+
+#right{
+    padding-left: 100px;
+}
+
+#right h4{
+    color: rgb(255,90,44);
+    margin-left: -80px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#login{
+    background-color: rgb(9,42,206);
+    color: white;   
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+#login:hover{
+    background-color: rgb(255,90,44);
+    transition: all 0.5s 0s;
+} 
+
+a{
+    color: rgb(9,42,206) !important;
+    text-decoration-style: none;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px){
+
+    #left{
+     display: none;
+        
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .row{
+        width: 100%;
+    }
+
+   
+}
+
+@media only screen and (max-width: 900px){
+
+
+   
+       .container{
+           width: 100%;
+       }
+   
+       .row{
+           width: 100%;
+       }
+
+}

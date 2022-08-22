@@ -1,0 +1,55 @@
+
+
+#search{
+    margin-right: 18px;
+    width: 20px;
+    font-size: 10px;
+    height: 20px;
+}
+
+#cart{
+
+    margin-right: 90px;
+    width: 25px;
+    font-size: 10px;
+    height: 25px;
+}
+
+
+li a{
+    color: black !important;
+    font-size: 13px;
+    margin-right: 35px;
+}
+
+li a:hover{
+    color: rgb(255,90,44) !important;
+    transition: all 0.5s 0s;
+}
+
+.login{
+    background-color: white;
+    border: none;
+    text-decoration: none;
+    color: black;
+    outline: none;
+    margin-right: 10px ;
+    border-radius: 4px;
+}
+
+.login:hover{
+    color: white;
+    background-color: rgb(255,90,44);
+    transition: all 0.5s 0s;
+}
+
+
+.signup{
+    background-color: rgb(255,90,44);
+    border: none;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    border-radius: 4px;
+}
+

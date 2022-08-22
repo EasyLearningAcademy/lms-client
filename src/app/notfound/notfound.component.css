@@ -1,0 +1,10 @@
+.container1{
+    height: 100px;
+    border-radius: 20px 20px 20px;
+    font-size: 30px;
+    width: 54%;
+    margin-left: 300px;
+    box-shadow: inset;
+    text-align: center;
+    margin-top: 100px;
+}

@@ -20,6 +20,10 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
 import { MatTableModule} from '@angular/material/table';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { UserCoursesComponent } from './user-courses/user-courses.component'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio'
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,12 @@ import { UserCoursesComponent } from './user-courses/user-courses.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatRadioModule,
+    MatTooltipModule
     
   ],
   providers: [],

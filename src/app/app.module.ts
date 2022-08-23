@@ -24,6 +24,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio'
 import { MatTooltipModule } from '@angular/material/tooltip';
+// import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatSelectModule,
     MatInputModule,
     MatRadioModule,
-    MatTooltipModule
+    MatTooltipModule,
+    // NgxMatFileInputModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

@@ -11,5 +11,7 @@ export class AddCourseComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public favoriteSeason = "";
+  seasons: string[] = ['Free', 'Paid'];
 
 }

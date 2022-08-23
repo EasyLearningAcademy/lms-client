@@ -61,6 +61,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     MatCardModule,
     MatMenuModule,
     MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

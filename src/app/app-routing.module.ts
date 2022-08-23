@@ -7,8 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
-  {path: "", pathMatch:"full", redirectTo: "/home"},
-  {path:"home", component: AppComponent},
+  {path: "", pathMatch:"full", redirectTo: "/user/dashboard"},
+  // {path:"user", component: AppComponent},
   {path: "user", component: NavComponent, children: [
     {path:"dashboard", component: DashboardComponent},
     {path: "my-courses", component: UserCoursesComponent},

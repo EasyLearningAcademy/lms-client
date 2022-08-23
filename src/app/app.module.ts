@@ -20,6 +20,14 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
 import { MatTableModule} from '@angular/material/table';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { UserCoursesComponent } from './user-courses/user-courses.component'; 
+import { NavbarComponent } from './navbar/navbar.component';
+import { UserpageComponent } from './userpage/userpage.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { UsersignupComponent } from './usersignup/usersignup.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { CourseComponent } from './course/course.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,15 @@ import { UserCoursesComponent } from './user-courses/user-courses.component';
     DashboardComponent,
     TransactionHistoryComponent,
     AddCourseComponent,
-    UserCoursesComponent
+    UserCoursesComponent,
+    NavbarComponent,
+    UserpageComponent,
+    FooterComponent,
+    AboutComponent,
+    UsersignupComponent,
+    UserloginComponent,
+    CourseComponent,
+    NotfoundComponent, 
   ],
   imports: [
     BrowserModule,
@@ -45,7 +61,6 @@ import { UserCoursesComponent } from './user-courses/user-courses.component';
     MatCardModule,
     MatMenuModule,
     MatTableModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

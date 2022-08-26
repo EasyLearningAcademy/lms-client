@@ -29,27 +29,23 @@ li a:hover{
 
 .login{
     background-color: white;
-    border: none;
-    text-decoration: none;
-    color: black;
-    outline: none;
-    margin-right: 10px ;
-    border-radius: 4px;
+    color: rgb(255,90,44);
+    transition: all 0.5s 0s ease-in-out;
 }
 
 .login:hover{
     color: white;
     background-color: rgb(255,90,44);
-    transition: all 0.5s 0s;
 }
 
 
 .signup{
     background-color: rgb(255,90,44);
-    border: none;
-    text-decoration: none;
     color: white;
-    outline: none;
-    border-radius: 4px;
+    transition: all 0.5s 0s ease-in-out;margin-left: 10px !important;
+}
+
+.activeButton {
+    color: rgb(255,90,44);
 }
 

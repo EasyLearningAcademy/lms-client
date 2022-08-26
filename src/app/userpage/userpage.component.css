@@ -6,39 +6,43 @@ header{
 }
 
 h1{
-    font-size: 60px;
+    font-size: 65px;
     color: white;
     position: absolute;
     margin: 15% 0 0 20% ;
+    font-weight: 600;
 }
 
 p{  
     color: white;
     position: absolute;
-    margin: 27% 0 0 20% ;
+    margin: 26% 0 0 20%;
+    font-size: 15px;
 }
 
 #start{
-    width: 17%;
+    width: 13%;
     background-color: rgb(255,90,44);
     color: white;
     position: absolute;
-    margin: 32% 0 0 20%;
-    padding: 18px;
+    margin: 30% 0 0 20%;
+    padding: 15px;
     border-radius: 30px;
     outline: none;
     border: none;
 }
 
 #start:hover{
-    background-color: rgb(9,42,206);
-    transition: all 0.5s 0s;
+    background-color: rgb(14, 26, 87);
+    transition: all 0.7s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
 } 
 
 
 #btn{
     width: 17%;
-    background-color: rgb(9,42,206);
+    background-color: rgb(14, 26, 87);
     color: white;
     position: absolute;
     margin: 32% 0 0 20%;
@@ -57,10 +61,11 @@ p{
 
 /* beginin of features */
 #tones{
-    color: black;
+    color: rgb(14, 26, 87);
     text-align: center;
     font-size: 40px;
     font-weight: bold;
+    margin-top: 30px;
 }
 
 .smaller {
@@ -476,6 +481,7 @@ p{
         color: white;
         position: absolute;
         margin: 15% 0 0 10% ;
+        text-align: center;
     }
     
     p{  

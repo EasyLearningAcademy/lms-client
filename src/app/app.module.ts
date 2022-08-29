@@ -33,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { ContactComponent } from './contact/contact.component';
+import { OurBestComponent } from './our-best/our-best.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ContactComponent } from './contact/contact.component';
     UserloginComponent,
     CourseComponent,
     ContactComponent,
-    NotfoundComponent, 
+    NotfoundComponent,
+    OurBestComponent, 
   ],
   imports: [
     BrowserModule,

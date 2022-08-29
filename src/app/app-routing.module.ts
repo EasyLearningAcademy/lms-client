@@ -14,17 +14,10 @@ import { UsersignupComponent } from './usersignup/usersignup.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
-  {path: "", pathMatch:"full", redirectTo: "/user/dashboard"},
-  // {path:"user", component: AppComponent},
-=======
-  // {path: "", pathMatch:"full", redirectTo: "/home"},
-  // {path:"home", component: AppComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: UserpageComponent},
   {path: 'signup', component: UsersignupComponent },
   {path: 'contact', component: ContactComponent},
->>>>>>> fdadfce339da82fae60df0c222e0981e4993d9bb
   {path: "user", component: NavComponent, children: [
     {path:"dashboard", component: DashboardComponent},
     {path: "my-courses", component: UserCoursesComponent},

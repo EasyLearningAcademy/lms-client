@@ -11,23 +11,30 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import { UsersignupComponent } from './usersignup/usersignup.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
   {path: "", pathMatch:"full", redirectTo: "/user/dashboard"},
   // {path:"user", component: AppComponent},
+=======
+  // {path: "", pathMatch:"full", redirectTo: "/home"},
+  // {path:"home", component: AppComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: UserpageComponent},
+  {path: 'signup', component: UsersignupComponent },
+  {path: 'contact', component: ContactComponent},
+>>>>>>> fdadfce339da82fae60df0c222e0981e4993d9bb
   {path: "user", component: NavComponent, children: [
     {path:"dashboard", component: DashboardComponent},
     {path: "my-courses", component: UserCoursesComponent},
     {path:"add-course", component: AddCourseComponent},
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'signup', component: UsersignupComponent },
-    {path: 'login', component: UserloginComponent},
-    {path: 'userpage', component: UserpageComponent},
-    {path: 'course', component: CourseComponent},
-    {path: 'about', component: AboutComponent},
+  ]},
+  {path: 'login', component: UserloginComponent},
+  {path: 'course', component: CourseComponent},
+  {path: 'about', component: AboutComponent},
 
-    {path: '**', component: NotfoundComponent}
-  ]}
+  {path: '**', component: NotfoundComponent}
 ];
 
 @NgModule({

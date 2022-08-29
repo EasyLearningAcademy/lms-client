@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,6 +27,13 @@ import { UsersignupComponent } from './usersignup/usersignup.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { CourseComponent } from './course/course.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { ContactComponent } from './contact/contact.component';
+import { OurBestComponent } from './our-best/our-best.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +50,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     UsersignupComponent,
     UserloginComponent,
     CourseComponent,
-    NotfoundComponent, 
+    ContactComponent,
+    NotfoundComponent,
+    OurBestComponent, 
   ],
   imports: [
     BrowserModule,
@@ -60,7 +68,13 @@ import { NotfoundComponent } from './notfound/notfound.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatTooltipModule,
+    MatRadioModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatProgressBarModule
 
   ],
   providers: [],

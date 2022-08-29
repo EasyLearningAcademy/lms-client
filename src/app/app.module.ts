@@ -47,12 +47,12 @@ import { OurBestComponent } from './our-best/our-best.component';
     UserpageComponent,
     FooterComponent,
     AboutComponent,
-    UsersignupComponent,
-    UserloginComponent,
     CourseComponent,
     ContactComponent,
     NotfoundComponent,
     OurBestComponent, 
+    UserloginComponent, 
+    UsersignupComponent
   ],
   imports: [
     BrowserModule,

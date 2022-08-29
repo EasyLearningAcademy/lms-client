@@ -20,12 +20,14 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
 import { MatTableModule} from '@angular/material/table';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { UserCoursesComponent } from './user-courses/user-courses.component'; 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from '@angular/material/radio'
-import { MatTooltipModule } from '@angular/material/tooltip';
-// import { NgxMatFileInputModule } from '@angular-material-components/file-input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { UserpageComponent } from './userpage/userpage.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { UsersignupComponent } from './usersignup/usersignup.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { CourseComponent } from './course/course.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     TransactionHistoryComponent,
     AddCourseComponent,
-    UserCoursesComponent
+    UserCoursesComponent,
+    NavbarComponent,
+    UserpageComponent,
+    FooterComponent,
+    AboutComponent,
+    UsersignupComponent,
+    UserloginComponent,
+    CourseComponent,
+    NotfoundComponent, 
   ],
   imports: [
     BrowserModule,
@@ -50,16 +60,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-    MatRadioModule,
-    MatTooltipModule,
-    // NgxMatFileInputModule,
-    FormsModule,
-    ReactiveFormsModule
-    
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

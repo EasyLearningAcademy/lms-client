@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/Auth/auth.service';
 
 @Component({
   selector: 'app-add-course',
@@ -10,14 +11,21 @@ export class AddCourseComponent implements OnInit {
 
   public addCourse: FormGroup;
 
-  public courseCategory = "";
+  // public courseCategory = "";
+
+  public courseCategories: Array<string> = ['Programming', 'Graphics Design', 'Business', 'Politics', 'Sports', 'Technology'];
 
   constructor(
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    private _Auth: AuthService
   ) { 
     this.addCourse = this._fb.group({
       courseName: ['', Validators.required],
-      courseCategory: ['', Validators.required]
+      courseCategory: ['Programming', Validators.required],
+      courseDescription: ['', Validators.required],
+      freePaid: ['Free'],
+      price: ['', Validators.required],
+
     })
   }
 
@@ -28,15 +36,15 @@ export class AddCourseComponent implements OnInit {
   public favoriteSeason = "";
   seasons: string[] = ['Free', 'Paid'];
 
+  // getFreePaid() {
+  //   return this.addCourse.get('freePaid');
+  // }
+
   saveCourse() {
-    console.log("Hello world")
-    let courseName = this.addCourse.controls.courseName.value;
-    // let courseCategory = this.addCourse.controls.courseCategory.value
-
-    let courseObj = {
-      courseName,
-    }
-
-    console.log(courseObj);
+    this._Auth.addCourse(this.addCourse.value).subscribe(res=> {
+      console.log(res);
+    },
+    
+    err=>console.log(err));
   }
 }

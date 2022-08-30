@@ -27,4 +27,9 @@ export class AuthService {
       return this._http.post<any>(`${this.baseUrl}login`, data);
     }
 
+    // FUNTION FOR ADDING COURSES
+    addCourse(data:any) {
+      return this._http.post<any>(`${this.userBaseUrl}add-course`, data);
+    }
+
 }

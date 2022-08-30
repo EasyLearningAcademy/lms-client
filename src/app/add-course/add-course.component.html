@@ -90,19 +90,14 @@
                 <select class="form-select" aria-label="Category Select" id="categorySelect">
                     <!-- <option selected disabled><Select> Category</Select></option> -->
                     <option selected disabled>--</option>
-                    <option>Programming</option>
-                    <option>Graphics design</option>
-                    <option>Business</option>
-                    <option>Politics</option>
-                    <option>Sports</option>
-                    <option>Technology</option>
+                    <option *ngFor="let categories of courseCategories">{{categories}}</option>
                   </select>
             </div>
 
             <div class="form-row">
                 <div class="col-12 mt-4">
                   <label for="description" class="form-label">Description</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add course description up to 1000 words"></textarea>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add course description up to 1000 words" formControlName="courseDescription"></textarea>
                 </div>
             </div>
 
@@ -126,7 +121,7 @@
 
             <div class="col-md-6 mt-4">
                 <label for="price">Price</label>
-                <input type="number" class="form-control mt-2" id="price" placeholder="$100">
+                <input type="number" class="form-control mt-2" id="price" placeholder="$100" formControlName="price">
             </div>
 
             <div class="col-md-6 mt-4">

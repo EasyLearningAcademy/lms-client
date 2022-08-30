@@ -62,9 +62,11 @@ export class UserloginComponent implements OnInit {
         } else if(res.isWrongPassword == true) {
           this.passwordErr = true;
           this.passwordErrMsg = res.message;
+          this.loading = false;
         } else if(res.isSuccess == false && res.userNotExist == true) {
           this.userNotExist = true;
           this.userNotExistErrMsg = res.message;
+          this.loading = false;
         }
       },
       err=>console.log(err)

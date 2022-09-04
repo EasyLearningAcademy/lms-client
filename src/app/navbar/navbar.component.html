@@ -5,22 +5,32 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center mr-4" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0">
+        <ul class="navbar-nav mb-2 mb-lg-0 mt-md-2">
           <li class="nav-item">
-            <a routerLink="/home" routerLinkActive="activeButton" class="nav-link active" aria-current="page">HOME</a>
+            <a routerLink="/home" [routerLinkActive]="['activeRoute']" class="nav-link" >HOME</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/about" routerLinkActive="activeButton" class="nav-link">ABOUT</a>
+            <a routerLink="/about" [routerLinkActive]="['activeRoute']" class="nav-link">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/course" routerLinkActive="activeButton" >COURSES</a>
+            <a class="nav-link" routerLink="/course" [routerLinkActive]="['activeRoute']" >COURSES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact" routerLinkActive="activeButton">CONTACT US</a>
+            <a class="nav-link" routerLink="/contact" [routerLinkActive]="['activeRoute']">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" style="font-size: 10px;">
+              <mat-icon>search</mat-icon>
+            </a>
+          </li>
+          <li class="nav-item" style=" margin-left: -30px; font-size: 10px;">
+            <a class="nav-link" routerLink="/cart" [routerLinkActive]="['activeRoute']">
+              <mat-icon>shop</mat-icon>
+            </a>
           </li>
         </ul>
-      <img id="search" src="/assets/images/logos/Search_52px.png" alt="">
-      <img id="cart"  src="/assets/images/logos/Shopping Bag_64px.png" alt="">
+      <!-- <img id="search" src="/assets/images/logos/Search_52px.png" alt="">
+      <img id="cart"  src="/assets/images/logos/Shopping Bag_64px.png" alt=""> -->
       <button routerLink="/login" class="login" mat-button>Login</button>
       <button routerLink="/signup" class="signup" mat-button>Signup</button>
     </div>

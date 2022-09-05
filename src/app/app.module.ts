@@ -35,6 +35,15 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { ContactComponent } from './contact/contact.component';
 import { OurBestComponent } from './our-best/our-best.component';
 import { InterceptorService } from './services/Interceptor/interceptor.service';
+import { CategoriesComponent } from './categories/categories.component';
+import { DesignComponent } from './categories-list/design/design.component';
+import { DevelopmentComponent } from './categories-list/development/development.component';
+import { MarketingComponent } from './categories-list/marketing/marketing.component';
+import { ItSoftwareComponent } from './categories-list/it-software/it-software.component';
+import { PersonalDevelopmentComponent } from './categories-list/personal-development/personal-development.component';
+import { BusinessComponent } from './categories-list/business/business.component';
+import { PhotographyComponent } from './categories-list/photography/photography.component';
+import { MusicComponent } from './categories-list/music/music.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +63,15 @@ import { InterceptorService } from './services/Interceptor/interceptor.service';
     OurBestComponent,
     UserloginComponent,
     UsersignupComponent,
-
+    CategoriesComponent,
+    DesignComponent,
+    DevelopmentComponent,
+    MarketingComponent,
+    ItSoftwareComponent,
+    PersonalDevelopmentComponent,
+    BusinessComponent,
+    PhotographyComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,

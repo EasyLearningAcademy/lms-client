@@ -44,6 +44,7 @@ import { PersonalDevelopmentComponent } from './categories-list/personal-develop
 import { BusinessComponent } from './categories-list/business/business.component';
 import { PhotographyComponent } from './categories-list/photography/photography.component';
 import { MusicComponent } from './categories-list/music/music.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { MusicComponent } from './categories-list/music/music.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatProgressBarModule,
+    MatStepperModule
 
 
   ],

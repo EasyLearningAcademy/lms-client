@@ -1,8 +1,207 @@
 <div class="grid-container">
     <h1 class="mat-h1">Add course</h1>
 
+    <mat-stepper linear #stepper class="container">
+        <mat-step [stepControl]="firstFormGroup" [optional]="isOptional">
+          <form [formGroup]="firstFormGroup" class="row g-3">
+            <ng-template matStepLabel style="background-color: orange !important;">Course Details</ng-template>
+            <div class="col-md-6">
+              <label for="courseName" class="form-label">Course name</label>
+              <input type="text" placeholder="Course Name" class="form-control" id="courseName" formControlName="courseName" name="courseName" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="categorySelect" class="form-label">Category</label>
+                <select class="form-select" aria-label="Category Select" id="categorySelect">
+                  <option selected disabled>--</option>
+                  <option *ngFor="let categories of courseCategories">{{categories}}</option>
+                </select>
+              </div>
+
+            <div class="form-row">
+              <div class="col-12 mt-4">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add course description up to 1000 words" formControlName="courseDescription" required></textarea>
+              </div>
+            </div>
+
+            <div>
+              <button mat-button matStepperNext color=warn (click)="nextStep()">Next</button>
+            </div>
+          </form>
+        </mat-step>
+        
+        <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+          
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Course Module</ng-template>
+            
+            <div class="modules-card mt-2">
+              <div class="row m-3">
+                <div class="col-12 col-md-2 col-lg-4">
+                  <mat-card class="example-card">
+                    <mat-card-title>Introduction to programming</mat-card-title>
+                    <mat-card-content>
+                      <p>{{ longText }}</p>
+                    </mat-card-content>
+                    <mat-divider inset></mat-divider>
+                    <mat-card-actions>
+                      <button mat-button color="warn" [matMenuTriggerFor]="menu">
+                        Actions
+                      </button>
+                    </mat-card-actions>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>Add resources</button>
+                      <button mat-menu-item>Edit</button>
+                      <button mat-menu-item>Delete</button>
+                    </mat-menu>
+                    <!-- <mat-card-footer>
+                      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </mat-card-footer> -->
+                  </mat-card>
+                </div>
+
+                <div class="col-12 col-md-2 col-lg-4">
+                  <mat-card class="example-card">
+                    <mat-card-title>Introduction to programming</mat-card-title>
+                    <mat-card-content>
+                      <p>{{ longText }}</p>
+                    </mat-card-content>
+                    <mat-divider inset></mat-divider>
+                    <mat-card-actions>
+                      <button mat-button color="warn" [matMenuTriggerFor]="menu">
+                        Actions
+                      </button>
+                    </mat-card-actions>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>Add resources</button>
+                      <button mat-menu-item>Edit</button>
+                      <button mat-menu-item>Delete</button>
+                    </mat-menu>
+                    <!-- <mat-card-footer>
+                      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </mat-card-footer> -->
+                  </mat-card>
+                </div>
+
+                <div class="col-12 col-md-2 col-lg-4">
+                  <mat-card class="example-card">
+                    <mat-card-title>Introduction to programming</mat-card-title>
+                    <mat-card-content>
+                      <p>{{ longText }}</p>
+                    </mat-card-content>
+                    <mat-divider inset></mat-divider>
+                    <mat-card-actions>
+                      <button mat-button color="warn" [matMenuTriggerFor]="menu">
+                        Actions
+                      </button>
+                    </mat-card-actions>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>Add resources</button>
+                      <button mat-menu-item>Edit</button>
+                      <button mat-menu-item>Delete</button>
+                    </mat-menu>
+                    <!-- <mat-card-footer>
+                      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </mat-card-footer> -->
+                  </mat-card>
+                </div>
+              </div>
+
+              <div class="row m-3">
+                <div class="col-12 col-md-2 col-lg-4">
+                  <mat-card class="example-card">
+                    <mat-card-title>Introduction to programming</mat-card-title>
+                    <mat-card-content>
+                      <p>{{ longText }}</p>
+                    </mat-card-content>
+                    <mat-divider inset></mat-divider>
+                    <mat-card-actions>
+                      <button mat-button color="warn" [matMenuTriggerFor]="menu">
+                        Actions
+                      </button>
+                    </mat-card-actions>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>Add resources</button>
+                      <button mat-menu-item>Edit</button>
+                      <button mat-menu-item>Delete</button>
+                    </mat-menu>
+                    <!-- <mat-card-footer>
+                      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </mat-card-footer> -->
+                  </mat-card>
+                </div>
+
+                <div class="col-12 col-md-2 col-lg-4">
+                  <mat-card class="example-card">
+                    <mat-card-title>Introduction to programming</mat-card-title>
+                    <mat-card-content>
+                      <p>{{ longText }}</p>
+                    </mat-card-content>
+                    <mat-divider inset></mat-divider>
+                    <mat-card-actions>
+                      <button mat-button color="warn" [matMenuTriggerFor]="menu">
+                        Actions
+                      </button>
+                    </mat-card-actions>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>Add resources</button>
+                      <button mat-menu-item>Edit</button>
+                      <button mat-menu-item>Delete</button>
+                    </mat-menu>
+                    <!-- <mat-card-footer>
+                      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </mat-card-footer> -->
+                  </mat-card>
+                </div>
+
+                <div class="col-12 col-md-2 col-lg-4">
+                  <mat-card class="example-card">
+                    <mat-card-title>Introduction to programming</mat-card-title>
+                    <mat-card-content>
+                      <p>{{ longText }}</p>
+                    </mat-card-content>
+                    <mat-divider inset></mat-divider>
+                    <mat-card-actions>
+                      <button mat-button color="warn" [matMenuTriggerFor]="menu">
+                        Actions
+                      </button>
+                    </mat-card-actions>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>Add resources</button>
+                      <button mat-menu-item>Edit</button>
+                      <button mat-menu-item>Delete</button>
+                    </mat-menu>
+                    <!-- <mat-card-footer>
+                      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </mat-card-footer> -->
+                  </mat-card>
+                </div>
+              </div>
+            </div>
+            
+            <button mat-mini-fab class="m-3" style="background-color: rgb(255,90,44); color: #fff; width: 40px; height: 40px;">
+              <mat-icon>add</mat-icon>
+            </button>
+
+            <div class="mt-3">
+              <button mat-button matStepperPrevious>Prev</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+
     <!-- Add course form for mobile -->
-    <div class="container mt-3 bg-white shadow-sm p-5 w-100 d-block d-md-none">
+    <!-- <div class="container mt-3 bg-white shadow-sm p-5 w-100 d-block d-md-none">
         <form class="row g-3" [formGroup]="addCourse">
             <div class="col-md-6">
                 <label for="courseName" class="form-label">Course name</label>
@@ -12,7 +211,7 @@
             <div class="col-md-6">
                 <label for="categorySelect" class="form-label">Category</label>
                 <select class="form-select" aria-label="Category Select" id="categorySelect" formControlName="courseCategory">
-                    <!-- <option selected disabled><Select> Category</Select></option> -->
+                    <option selected disabled><Select> Category</Select></option>
                     <option selected disabled>--</option>
                     <option>Programming</option>
                     <option>Graphics design</option>
@@ -45,7 +244,7 @@
                             matTooltip="Info"
                             matTooltipPosition="right"
                     ></button>
-                    <!-- <div>Your favorite season is: {{favoriteSeason}}</div>   -->
+                    <div>Your favorite season is: {{favoriteSeason}}</div>  
                 </div>
 
             <div class="col-md-6 mt-4">
@@ -57,7 +256,7 @@
             <div class="col-md-6 mt-4">
                 <label for="categorySelect" class="form-label">Course Type</label>
                 <select class="form-select" aria-label="Category Select" id="categorySelect">
-                    <!-- <option selected disabled><Select> Category</Select></option> -->
+                    <option selected disabled><Select> Category</Select></option>
                     <option selected disabled>--</option>
                     <option>Video</option>
                     <option>PDF</option>
@@ -78,11 +277,11 @@
               </button>
             </div>
         </form>
-      </div>
+    </div> -->
 
     <!-- ADD COURSE FORM FOR PC -->
-    <div class="container mt-3 bg-white shadow-sm p-5 w-75 d-none d-md-block add-course-card">
-        <form class="row g-3" [formGroup]="addCourse" enctype="multipart/form-data">
+    <!-- <div class="container mt-3 bg-white shadow-sm p-5 w-75 d-none d-md-block add-course-card"> -->
+        <!-- <form class="row g-3" [formGroup]="addCourse" enctype="multipart/form-data">
             <div class="col-md-6">
               <label for="courseName" class="form-label">Course name</label>
               <input type="text" placeholder="Course Name" class="form-control" id="courseName" formControlName="courseName" name="courseName">
@@ -91,7 +290,7 @@
             <div class="col-md-6">
                 <label for="categorySelect" class="form-label">Category</label>
                 <select class="form-select" aria-label="Category Select" id="categorySelect">
-                  <!-- <option selected disabled><Select> Category</Select></option> -->
+                  <option selected disabled><Select> Category</Select></option>
                   <option selected disabled>--</option>
                   <option *ngFor="let categories of courseCategories">{{categories}}</option>
                 </select>
@@ -119,7 +318,7 @@
                     matTooltip="Info"
                     matTooltipPosition="right"
                     ></button>
-                    <!-- <div>Your favorite season is: {{favoriteSeason}}</div>   -->
+                    <div>Your favorite season is: {{favoriteSeason}}</div>  
                   </div>
 
                   <div class="col-md-6 mt-4">
@@ -130,7 +329,7 @@
                   <div class="col-md-6 mt-4">
                     <label for="categorySelect" class="form-label">Course Type</label>
                     <select class="form-select" aria-label="Category Select" id="categorySelect">
-                      <!-- <option selected disabled><Select> Category</Select></option> -->
+                      <option selected disabled><Select> Category</Select></option>
                       <option selected disabled>--</option>
                       <option>Video</option>
                       <option>PDF</option>
@@ -154,6 +353,6 @@
               </button>
           </div>
 
-        </form>
+        </form> -->
     </div>
 

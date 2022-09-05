@@ -1,9 +1,21 @@
 .grid-container {
-    margin: 20px;
-    margin-top: 70px;
+  margin: 20px;
+  margin-top: 70px;
 }
 
-.add-course-card {
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+/* .add-course-card {
   max-height: 580px;
   overflow: auto;
 }
@@ -14,12 +26,6 @@
     font-size: 30px;
 }
 
-/* .example-radio-group {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0;
-  align-items: flex-start;
-} */
 
 .radio-button {
   margin: 5px;
@@ -42,4 +48,4 @@ html::-webkit-scrollbar-thumb:hover {
 html::-webkit-scrollbar-thumb:active {
   background: rgb(68, 68, 68);
   border-radius: 10px;
-}
+} */

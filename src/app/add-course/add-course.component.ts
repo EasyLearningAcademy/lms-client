@@ -1,3 +1,4 @@
+import { invalid } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/Auth/auth.service';
@@ -9,87 +10,106 @@ import { AuthService } from '../services/Auth/auth.service';
 })
 export class AddCourseComponent implements OnInit {
 
-  public addCourse: FormGroup;
+  // public addCourse: FormGroup;
 
-  fileSrc = null;
-  coverImageSrc= null;
+  // fileSrc = null;
+  // coverImageSrc= null;
 
-  public courseCategories: Array<string> = ['Programming', 'Graphics Design', 'Business', 'Politics', 'Sports', 'Technology'];
+  public courseCategories: Array<string> = ['Design', 'Development', 'Marketing', 'It and Software', 'Personal Development', 'Business', 'Photography', 'Music'];
 
-  constructor(
-    private _fb: FormBuilder,
-    private _Auth: AuthService
-  ) {
-    this.addCourse = this._fb.group({
-      courseName: ['', Validators.required],
-      courseCategory: ['Programming', Validators.required],
-      courseDescription: ['', Validators.required],
-      freePaid: ['Free'],
-      price: ['', Validators.required],
-      coverImage: ['', Validators.required],
-      courseFile: ['', Validators.required]
-    })
-  }
+  // constructor(
+  //   private _fb: FormBuilder,
+  //   private _Auth: AuthService
+  // ) {
+  //   this.addCourse = this._fb.group({
+  //     courseName: ['', Validators.required],
+  //     courseCategory: ['Programming', Validators.required],
+  //     courseDescription: ['', Validators.required],
+  //     freePaid: ['Free'],
+  //     price: ['', Validators.required],
+  //     coverImage: ['', Validators.required],
+  //     courseFile: ['', Validators.required]
+  //   })
+  // }
+
+  firstFormGroup = this._formBuilder.group({
+    courseName: ['', Validators.required],
+    courseDescription: ['', Validators.required]
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: '',
+  });
+  isOptional = true;
+
+  constructor(private _formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    console.log("Hello world")
   }
-  public favoriteSeason = "";
-  seasons: string[] = ['Free', 'Paid'];
+
+  nextStep() {
+    if(this.firstFormGroup.invalid) {
+      console.log("Form is invalid")
+    }
+  }
+
+  public longText = "In this module you'll learn what programming means";
+
+  // public favoriteSeason = "";
+  // seasons: string[] = ['Free', 'Paid'];
 
   // getFreePaid() {
   //   return this.addCourse.get('freePaid');
   // }
 
 
-  onFileChange(event:any) {
-    // this.fileSrc = <File>event.target.files[0];
-    let img = event.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(img);
-    reader.onload = ()=>{
-      this.fileSrc = reader.result as string;
-      this.addCourse.patchValue({courseFile: reader.result});
-    }
-  }
+  // onFileChange(event:any) {
+  //   // this.fileSrc = <File>event.target.files[0];
+  //   let img = event.target.files[0];
+  //   const reader = new FileReader();
+  //   reader.readAsDataURL(img);
+  //   reader.onload = ()=>{
+  //     this.fileSrc = reader.result as string;
+  //     this.addCourse.patchValue({courseFile: reader.result});
+  //   }
+  // }
 
 
-  onCoverImageChange(event:any) {
-    // this.coverImageSrc = <File>event.target.files[0];
-    let img = event.target.files[0]
-    const reader = new FileReader();
-    reader.readAsDataURL(img);
-    reader.onload =()=>{
-      this.coverImageSrc = reader.result as string;
-      this.addCourse.patchValue({coverImage: reader.result})
-    }
-  }
+  // onCoverImageChange(event:any) {
+  //   // this.coverImageSrc = <File>event.target.files[0];
+  //   let img = event.target.files[0]
+  //   const reader = new FileReader();
+  //   reader.readAsDataURL(img);
+  //   reader.onload =()=>{
+  //     this.coverImageSrc = reader.result as string;
+  //     this.addCourse.patchValue({coverImage: reader.result})
+  //   }
+  // }
 
-  saveCourse() {
-    const formData = new FormData();
-    formData.append('courseName', this.addCourse.get('courseName')?.value)
-    formData.append('category', this.addCourse.get('courseCategory')?.value)
-    formData.append('courseDescription', this.addCourse.get('courseDescription')?.value)
-    formData.append('freePaid', this.addCourse.get('freePaid')?.value)
-    formData.append('price', this.addCourse.get('price')?.value)
-    formData.append('courseFile', this.addCourse.get('courseFile')?.value)
-    formData.append('coverImage', this.addCourse.get('coverImage')?.value)
+  // saveCourse() {
+  //   const formData = new FormData();
+  //   formData.append('courseName', this.addCourse.get('courseName')?.value)
+  //   formData.append('category', this.addCourse.get('courseCategory')?.value)
+  //   formData.append('courseDescription', this.addCourse.get('courseDescription')?.value)
+  //   formData.append('freePaid', this.addCourse.get('freePaid')?.value)
+  //   formData.append('price', this.addCourse.get('price')?.value)
+  //   formData.append('courseFile', this.addCourse.get('courseFile')?.value)
+  //   formData.append('coverImage', this.addCourse.get('coverImage')?.value)
 
-    const obj = {
-      courseName: this.addCourse.get('courseName').value,
-      courseCategory: this.addCourse.get('courseCategory').value,
-      courseDescription: this.addCourse.get('courseDescription').value,
-      freePaid: this.addCourse.get('freePaid').value,
-      price: this.addCourse.get('price').value,
-      // courseFile: this.addCourse.get('courseFile').value,
-      // coverImage: this.addCourse.get('coverImage').value,
+  //   const obj = {
+  //     courseName: this.addCourse.get('courseName').value,
+  //     courseCategory: this.addCourse.get('courseCategory').value,
+  //     courseDescription: this.addCourse.get('courseDescription').value,
+  //     freePaid: this.addCourse.get('freePaid').value,
+  //     price: this.addCourse.get('price').value,
+  //     // courseFile: this.addCourse.get('courseFile').value,
+  //     // coverImage: this.addCourse.get('coverImage').value,
 
-    }
-    console.log(obj)
-    this._Auth.addCourse({obj}).subscribe(res=> {
-      console.log(res);
-    },
+  //   }
+  //   console.log(obj)
+  //   this._Auth.addCourse({obj}).subscribe(res=> {
+  //     console.log(res);
+  //   },
 
-    err=>console.log(err));
-  }
+  //   err=>console.log(err));
+  // }
 }

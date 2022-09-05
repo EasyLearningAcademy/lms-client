@@ -17,7 +17,7 @@ export class AuthService {
     private _router: Router
   ) { }
 
-    // FUNCTION FOR SIGN UP 
+    // FUNCTION FOR SIGN UP
     signup(data: any) {
       return this._http.post<any>(`${this.baseUrl}register`, data);
     }
@@ -29,7 +29,12 @@ export class AuthService {
 
     // FUNTION FOR ADDING COURSES
     addCourse(data:any) {
-      return this._http.post<any>(`${this.userBaseUrl}add-course`, data);
+      return this._http.post<any>(`${this.userBaseUrl}courses/add-course`, data);
+    }
+
+    signOut() {
+      localStorage.removeItem('Auth');
+      this._router.navigate(['/login']);
     }
 
 }

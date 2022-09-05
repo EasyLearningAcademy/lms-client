@@ -46,11 +46,12 @@
                             matTooltipPosition="right"
                     ></button>
                     <!-- <div>Your favorite season is: {{favoriteSeason}}</div>   -->
-                </div> 
+                </div>
 
             <div class="col-md-6 mt-4">
                 <label for="price">Price</label>
                 <input type="number" class="form-control mt-2" id="price" placeholder="$100">
+
             </div>
 
             <div class="col-md-6 mt-4">
@@ -69,17 +70,19 @@
                 <input type="file" class="form-control mt-2" id="pix-upload">
             </div>
 
+
+
             <div class="mt-4">
-            <button mat-mini-fab style="height: 50px; width: 50px; background-color: orange;" routerLink="/user/add-course" (click)="saveCourse">
-                <mat-icon>save</mat-icon>
-            </button>            
+              <button mat-mini-fab style="height: 50px; width: 50px; background-color: orange;" routerLink="/user/add-course" (click)="saveCourse()">
+                  <mat-icon>save</mat-icon>
+              </button>
             </div>
         </form>
-    </div>
+      </div>
 
     <!-- ADD COURSE FORM FOR PC -->
     <div class="container mt-3 bg-white shadow-sm p-5 w-75 d-none d-md-block add-course-card">
-        <form class="row g-3" [formGroup]="addCourse">
+        <form class="row g-3" [formGroup]="addCourse" enctype="multipart/form-data">
             <div class="col-md-6">
               <label for="courseName" class="form-label">Course name</label>
               <input type="text" placeholder="Course Name" class="form-control" id="courseName" formControlName="courseName" name="courseName">
@@ -88,64 +91,69 @@
             <div class="col-md-6">
                 <label for="categorySelect" class="form-label">Category</label>
                 <select class="form-select" aria-label="Category Select" id="categorySelect">
-                    <!-- <option selected disabled><Select> Category</Select></option> -->
-                    <option selected disabled>--</option>
-                    <option *ngFor="let categories of courseCategories">{{categories}}</option>
-                  </select>
-            </div>
+                  <!-- <option selected disabled><Select> Category</Select></option> -->
+                  <option selected disabled>--</option>
+                  <option *ngFor="let categories of courseCategories">{{categories}}</option>
+                </select>
+              </div>
 
             <div class="form-row">
-                <div class="col-12 mt-4">
-                  <label for="description" class="form-label">Description</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add course description up to 1000 words" formControlName="courseDescription"></textarea>
-                </div>
+              <div class="col-12 mt-4">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add course description up to 1000 words" formControlName="courseDescription"></textarea>
+              </div>
             </div>
 
-                <div class="col-md-6 mt-4">
-                    <label id="example-radio-group-label">Free / Paid</label>
-                    <br>
-                    <mat-radio-group aria-labelledby="example-radio-group-label" color="warn">
-                    <mat-radio-button class="radio-button pt-1" *ngFor="let season of seasons" [value]="season">
-                        {{season}}
+            <div class="col-md-6 mt-4">
+              <label id="example-radio-group-label">Free / Paid</label>
+              <br>
+              <mat-radio-group aria-labelledby="example-radio-group-label" color="warn">
+                <mat-radio-button class="radio-button pt-1" *ngFor="let season of seasons" [value]="season">
+                  {{season}}
                     </mat-radio-button>
                     </mat-radio-group>
                     <button mat-icon-button color="warn" (click)="tooltip.toggle()">
                         <mat-icon>help_outline</mat-icon>
                     </button>
                     <button style="display: none;" #tooltip="matTooltip"
-                            matTooltip="Info"
-                            matTooltipPosition="right"
+                    matTooltip="Info"
+                    matTooltipPosition="right"
                     ></button>
                     <!-- <div>Your favorite season is: {{favoriteSeason}}</div>   -->
-                </div> 
+                  </div>
 
-            <div class="col-md-6 mt-4">
-                <label for="price">Price</label>
-                <input type="number" class="form-control mt-2" id="price" placeholder="$100" formControlName="price">
-            </div>
+                  <div class="col-md-6 mt-4">
+                    <label for="price">Price</label>
+                    <input type="number" class="form-control mt-2" id="price" placeholder="$100" formControlName="price">
+                  </div>
 
-            <div class="col-md-6 mt-4">
-                <label for="categorySelect" class="form-label">Course Type</label>
-                <select class="form-select" aria-label="Category Select" id="categorySelect">
-                    <!-- <option selected disabled><Select> Category</Select></option> -->
-                    <option selected disabled>--</option>
-                    <option>Video</option>
-                    <option>PDF</option>
-                    <option>Google Drive</option>
-                  </select>
-            </div>
+                  <div class="col-md-6 mt-4">
+                    <label for="categorySelect" class="form-label">Course Type</label>
+                    <select class="form-select" aria-label="Category Select" id="categorySelect">
+                      <!-- <option selected disabled><Select> Category</Select></option> -->
+                      <option selected disabled>--</option>
+                      <option>Video</option>
+                      <option>PDF</option>
+                      <option>Google Drive</option>
+                    </select>
+                  </div>
 
-            <div class="col-md-6 mt-4">
-                <label for="pix-upload">Upload a cover Image</label>
-                <input type="file" class="form-control mt-2" id="pix-upload">
-            </div>
+                  <div class="col-md-6 mt-4">
+                    <label for="pix-upload">Upload a cover Image</label>
+                    <input type="file" class="form-control mt-2" id="pix-upload" (change)="onCoverImageChange($event)">
+                  </div>
+
+                  <div class="col-md-6 mt-4">
+                    <label for="file">Course File</label>
+                    <input type="file" class="form-control mt-2" id="file-upload" (change)="onFileChange($event)">
+                  </div>
 
             <div class="mt-4">
               <button mat-mini-fab style="height: 50px; width: 50px; background-color: orange;" routerLink="/user/add-course" (click)="saveCourse()">
                   <mat-icon>save</mat-icon>
-              </button>            
+              </button>
           </div>
+
         </form>
     </div>
 
- 

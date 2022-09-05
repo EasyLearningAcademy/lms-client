@@ -81,7 +81,7 @@ export class UsersignupComponent implements OnInit {
         // CHECK IF THE RESPOONSE IS SUCCESS
         if (res.success == true) {
           this.Auth = res.token;
-          localStorage.setItem("Auht", this.Auth);
+          localStorage.setItem("Auth", this.Auth);
           this.registrationForm.reset();
           this._router.navigate(['/login'])
         }

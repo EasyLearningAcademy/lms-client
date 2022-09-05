@@ -18,7 +18,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 import { MatTableModule} from '@angular/material/table';
 import { AddCourseComponent } from './add-course/add-course.component';
-import { UserCoursesComponent } from './user-courses/user-courses.component'; 
+import { UserCoursesComponent } from './user-courses/user-courses.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import { FooterComponent } from './footer/footer.component';
@@ -30,10 +30,11 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { ContactComponent } from './contact/contact.component';
 import { OurBestComponent } from './our-best/our-best.component';
+import { InterceptorService } from './services/Interceptor/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -50,9 +51,10 @@ import { OurBestComponent } from './our-best/our-best.component';
     CourseComponent,
     ContactComponent,
     NotfoundComponent,
-    OurBestComponent, 
-    UserloginComponent, 
-    UsersignupComponent
+    OurBestComponent,
+    UserloginComponent,
+    UsersignupComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -74,10 +76,15 @@ import { OurBestComponent } from './our-best/our-best.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 .footer_3{
   height: 550px;
   background-image: url(/assets/images/shapes/waves.png);
@@ -31,7 +32,7 @@
 }
 
 .envent_all_view a:hover{
-  background-color: rgb(9,42,206);
+  background-color: rgb(21, 34, 100);
   transition: all 0.5s 0s;
 }
 

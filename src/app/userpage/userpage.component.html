@@ -1,80 +1,18 @@
+<!-- <div class="container-fluid grid-cont"></div> -->
+<app-navbar></app-navbar>
+
 <header>
-    <h1>Take The World's Best <br> Course Online.</h1>
+    <h1>Take The World's Best <br> <br> Course Online.</h1>
     <p>Ante amet vitae vulputate odio nulla vel pretium pulvinar aenean.
-      <br> Poncus eget adipiscing etiam arcu Ultricies.</p>
+    <br> Poncus eget adipiscing etiam arcu Ultricies.</p>
 
     <button id="start">START MY FREE MONTH</button>
-
-    
 </header>
 
-<!-- beginin of features one -->
-   <div class="container">
-            <h2 id="tones">We Have Tones of Course <br>
-                for Your!!</h2>
-
-        <div class="row justify-content-center">
-
-            <div class="col-sm-3">
-                <div id="features" class="card text-dark bg-light mt-2"> 
-                    <img class="smaller" src="/assets/images/features/courses_provide_1.jpg" />
-                    <p id="head1" class="text-dark">Design</p>
-                        <p id="head2" class="text-dark">Over 700 Courses</p>
-                    </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card text-dark bg-light mt-2"> 
-                    <img class="smaller" src="/assets/images/features/courses_provide_2.jpg" />
-                    <p id="head1" class="text-dark">Web Development</p>
-                        <p id="head2" class="text-dark">Over 500 Courses</p>
-                    </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card text-dark bg-light mt-2"> 
-                    <img class="smaller" src="/assets/images/features/courses_provide_3.jpg" />
-                    <p id="head1" class="text-dark">Marketing</p>
-                        <p id="head2" class="text-dark">Over 450 Courses</p>
-                    </div>
-            </div>
-
-        </div> <br>
-        <!-- end of features one -->
-
-        <!-- features two -->
-        <div class="row justify-content-center">
-
-            <div class="col-sm-3">
-                <div class="card text-dark bg-light mt-2"> 
-                    <img class="smaller" src="/assets/images/features/courses_provide_4.jpg" />
-                    <p id="head1" class="text-dark">Photography</p>
-                        <p id="head2" class="text-dark">Over 500 Courses</p>
-                    </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card text-dark bg-light mt-2"> 
-                    <img class="smaller" src="/assets/images/features/courses_provide_5.jpg" />
-                    <p id="head1" class="text-dark">Science</p>
-                        <p id="head2" class="text-dark">Over 1000 Courses</p>
-                    </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card text-dark bg-light mt-2"> 
-                    <img class="smaller" src="/assets/images/features/courses_provide_6.jpg" />
-                    <p id="head1" class="text-dark">Finance</p>
-                        <p id="head2" class="text-dark">Over 350 Courses</p>
-                    </div>
-            </div>
-
-        </div>
-   </div> <br> <br> <br> <br> <br> <br> <br> <br> 
-   <!-- end of feature two -->
-
-   <!-- beginin of doing the right thing -->
-        <div id="thinking" class="row w-100">
+<!-- CATEGORIES SECTION -->
+    <app-categories></app-categories>
+        
+<!-- <div id="thinking" class="row w-100">
             <div class="col-sm-6">
                 <img class="bigger" src="/assets/images/banner/about_thinking.jpg" />
             </div>
@@ -90,13 +28,10 @@
                 <h3 id="number"><a id="number2">01. </a>Certificate</h3> <br>
                 <h5 id="content">Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. <br> Pede phasellus eget maecenas.</h5>
             </div>
-        </div> <br> <br>
+</div>
+ <br> <br>
 
-        <!-- end of doing the right thing -->
-
-
-        <!-- beginin of popular courses one -->
-        <div class="container">
+    <div class="container">
             <h2 id="tones">Our Popular Courses </h2>
             <h5 id="popular-content">Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam <br> 
                 maecenas vel vici quis dictum rutrum nec nisi et.</h5> <br>
@@ -108,8 +43,8 @@
 
                     <img class="smaller" src="/assets/images/courses/courses_1.jpg" />
                     <div class="free">150$</div><br>
-                    <!-- <p id="">Design</p>
-                        <p id="">Over 700 Courses</p> -->
+                    <p id="">Design</p>
+                        <p id="">Over 700 Courses</p>
                         <div class="title">
                             <h4>Make Better Decisions</h4>
                             <h6>Teacher - <a href="">Janet Oduleke</a> </h6>
@@ -161,9 +96,6 @@
             </div>
 
         </div> <br>
-        <!-- end of popular courses one -->
-
-        <!-- beginin of popular courses two -->
         <div class="row justify-content-center">
 
             <div class="col-sm-3">
@@ -221,11 +153,8 @@
             </div>
 
         </div>
-   </div> <br> <br> <br> <br> <br> <br> <br> <br>
-   <!-- end of popular courses two-->
-
-
-   <!-- beginin of watch online videos -->
+   </div> 
+   <br> <br> <br> <br> <br> <br> <br> <br>
 
     <section>
         <div class="container" id="online">
@@ -277,85 +206,14 @@
                     </div>
                 </div>
             </div>
-        </section> <br> <br> <br> <br> <br> <br>
-      
-<!-- end of watch online videos -->
+    </section>
+     <br> <br> <br> <br> <br> <br> -->
 
 
-<!-- beginin of meet our team -->
+<!-- OUR BEST STUDENTS SECTION -->
+<app-our-best></app-our-best>
 
-<div class="container" id="instrutor_bg">
-    <div class="row">
-        <div class="instructor_title">
-            <h2>Meet Our Instructors</h2>
-            <h5>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. <br>
-                Etiam maecenas vel vici quis dictum rutrum nec nisi et.</h5>  
-
-                <button id="teamview" >View all</button>
-        </div>
-    </div> <br> <br>
-
-           
-        <div class="row justify-content-center">
-			<div class="col-6 col-sm-6 col-md-3 col-lg-3 counter_single_wrapper" id="counter_single_wrapper">
-				<div class="section count_single">
-                    <img src="assets/images/team/IMG-20220815-WA0006.jpg" alt="" id="team1"> <br> <br>
-					<div class="project-count counter" id="teamname">PAUL OLUWASEYI ISOLA</div>
-					<span id="teamprofession">FullStack Developer</span>
-				</div>
-			</div>
-
-			<div class="col-6 col-sm-6 col-md-3 col-lg-3 counter_single_wrapper" id="counter_single_wrapper">
-				<div class="section count_single" >
-                    <img src="assets/images/team/IMG-20220814-WA0002.jpg" alt="" id="team2"> <br> <br>
-					<div class="project-count counter" id="teamname">JANET ODULEKE</div>
-					<span id="teamprofession">FullSatck / Public Speaker</span>
-				</div>  
-			</div>  
-
-			<div class="col-6 col-sm-6 col-md-3 col-lg-3 counter_single_wrapper" id="counter_single_wrapper">
-				<div class="section count_single">
-                    <img src="assets/images/team/IMG_7wu0jo.jpg" alt="" id="team"> <br> <br>
-					<div class="project-count"><span class="teamname" id="teamname">IYANU OLUWASEYI AKINYEMI</span></div>
-					<span id="teamprofession">FullSatck Developer</span>
-				</div>
-			</div>
-
-
-
-		</div>
-        <br> <br>
-        
-        <div class="row justify-content-center">
-
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3 counter_single_wrapper">
-                <div class="section count_single">
-                    <img src="assets/images/team/IMG-20220813-WA0036.jpg" alt="" id="team"> <br> <br>
-                    <div class="project-count counter" id="teamname">FAITH TEMITOPE ALUKO</div>
-                    <span id="teamprofession">Frontend Developer / Graphic Designer</span>
-                </div>  
-            </div>  
-
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3 counter_single_wrapper">
-				<div class="section count_single">
-                    <img src="assets/images/team/IMG-20220816-WA0013.jpg" alt="" id="team"> <br><br>
-					<div class="project-count counter" id="teamname">FIYINFOLUWA JAMES</div>
-					<span id="teamprofession">FullSatck Developer</span>
-				</div>  
-			</div>  
-
-          
-        </div>
-
-</div> <br> <br> <br>
-
-<!-- beginin of course package    -->
-
-
-
-<!-- end of course package -->
-
-
+<!-- FOOTER SECTION -->
 <app-footer></app-footer>
 
 

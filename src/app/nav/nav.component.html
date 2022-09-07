@@ -2,7 +2,7 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false" style="background-color: orange">
+      [opened]="(isHandset$ | async) === false">
     <mat-nav-list class="pt-5">
       <div align="center" class="mb-5">
         <img src="../../assets/2048px-Angular_full_color_logo.svg.png" class="company-logo" alt="company-logo">
@@ -71,6 +71,11 @@
         <a mat-list-item class="text-white">
           <mat-icon>help</mat-icon>
           <span class="nav-list-text">Help</span>
+        </a>
+
+        <a mat-list-item class="text-white" routerLink="/home">
+          <mat-icon>home</mat-icon>
+          <span class="nav-list-text">Home</span>
         </a>
         
         <a mat-list-item class="text-white" routerLink="/user/add-course">

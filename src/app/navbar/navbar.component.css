@@ -1,55 +1,31 @@
-
-
-#search{
-    margin-right: 18px;
-    width: 20px;
-    font-size: 10px;
-    height: 20px;
-}
-
-#cart{
-
-    margin-right: 90px;
-    width: 25px;
-    font-size: 10px;
-    height: 25px;
-}
-
-
 li a{
-    color: black !important;
-    font-size: 13px;
+    font-size: 15px;
     margin-right: 35px;
 }
 
-li a:hover{
+.activeRoute {
     color: rgb(255,90,44) !important;
-    transition: all 0.5s 0s;
 }
 
 .login{
     background-color: white;
-    border: none;
-    text-decoration: none;
-    color: black;
-    outline: none;
-    margin-right: 10px ;
-    border-radius: 4px;
+    color: rgb(255,90,44);
+    transition: all 0.5s 0s ease-in-out;
 }
 
 .login:hover{
     color: white;
     background-color: rgb(255,90,44);
-    transition: all 0.5s 0s;
 }
 
 
 .signup{
     background-color: rgb(255,90,44);
-    border: none;
-    text-decoration: none;
     color: white;
-    outline: none;
-    border-radius: 4px;
+    transition: all 0.5s 0s ease-in-out;margin-left: 10px !important;
+}
+
+.activeButton {
+    color: rgb(255,90,44);
 }
 

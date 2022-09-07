@@ -11,23 +11,42 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import { UsersignupComponent } from './usersignup/usersignup.component';
+import { ContactComponent } from './contact/contact.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { DesignComponent } from './categories-list/design/design.component';
+import { DevelopmentComponent } from './categories-list/development/development.component';
+import { ItSoftwareComponent } from './categories-list/it-software/it-software.component';
+import { PersonalDevelopmentComponent } from './categories-list/personal-development/personal-development.component';
+import { BusinessComponent } from './categories-list/business/business.component';
+import { PhotographyComponent } from './categories-list/photography/photography.component';
+import { MusicComponent } from './categories-list/music/music.component';
+import { MarketingComponent } from './categories-list/marketing/marketing.component';
 
 const routes: Routes = [
-  {path: "", pathMatch:"full", redirectTo: "/home"},
-  {path:"home", component: AppComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: UserpageComponent},
+  {path: 'signup', component: UsersignupComponent },
+  {path: 'contact', component: ContactComponent},
   {path: "user", component: NavComponent, children: [
     {path:"dashboard", component: DashboardComponent},
     {path: "my-courses", component: UserCoursesComponent},
     {path:"add-course", component: AddCourseComponent},
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'signup', component: UsersignupComponent },
-    {path: 'login', component: UserloginComponent},
-    {path: 'userpage', component: UserpageComponent},
-    {path: 'course', component: CourseComponent},
-    {path: 'about', component: AboutComponent},
+  ]},
+  {path: 'login', component: UserloginComponent},
+  {path: 'course', component: CourseComponent},
+  {path: 'categories',  children: [
+    {path: 'design', component: DesignComponent},
+    {path: 'development', component: DevelopmentComponent},
+    {path: 'marketing', component: MarketingComponent},
+    {path: 'it-and-software', component: ItSoftwareComponent},
+    {path: 'personal-development', component: PersonalDevelopmentComponent},
+    {path: 'business', component: BusinessComponent},
+    {path: 'photography', component: PhotographyComponent},
+    {path: 'music', component: MusicComponent}
+  ]},
+  {path: 'about', component: AboutComponent},
 
-    {path: '**', component: NotfoundComponent}
-  ]}
+  {path: '**', component: NotfoundComponent}
 ];
 
 @NgModule({

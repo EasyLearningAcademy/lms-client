@@ -21,12 +21,14 @@ import { BusinessComponent } from './categories-list/business/business.component
 import { PhotographyComponent } from './categories-list/photography/photography.component';
 import { MusicComponent } from './categories-list/music/music.component';
 import { MarketingComponent } from './categories-list/marketing/marketing.component';
+import { AddResoursesComponent } from './add-resourses/add-resourses.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: UserpageComponent},
   {path: 'signup', component: UsersignupComponent },
   {path: 'contact', component: ContactComponent},
+  {path: 'resources', component: AddResoursesComponent},
   {path: "user", component: NavComponent, children: [
     {path:"dashboard", component: DashboardComponent},
     {path: "my-courses", component: UserCoursesComponent},

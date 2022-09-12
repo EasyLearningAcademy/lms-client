@@ -45,6 +45,7 @@ import { BusinessComponent } from './categories-list/business/business.component
 import { PhotographyComponent } from './categories-list/photography/photography.component';
 import { MusicComponent } from './categories-list/music/music.component';
 import { MatStepperModule } from '@angular/material/stepper';
+import { AddResoursesComponent } from './add-resourses/add-resourses.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     PersonalDevelopmentComponent,
     BusinessComponent,
     PhotographyComponent,
-    MusicComponent
+    MusicComponent,
+    AddResoursesComponent
   ],
   imports: [
     BrowserModule,

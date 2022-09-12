@@ -1,0 +1,16 @@
+
+<form [formGroup]="firstFormGroup">
+  <div class="col-md-6 mt-4">
+    <label for="pix-upload">Upload Resources Here</label>
+    <input type="file" class="form-control mt-2" id="video-upload" (change)="onFileChange($event)">
+  </div>
+
+  <div class="form-row">
+    <div class="col-12 mt-4">
+      <label for="description" class="form-label">Resources Name</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add name here " formControlName="resourcesName" required></textarea>
+    </div>
+  </div>
+
+  <button mat-button (click)="secondStep()"> Next</button>
+</form>

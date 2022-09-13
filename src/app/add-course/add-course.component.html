@@ -50,52 +50,27 @@
 
           <div class="modules-card mt-2">
                   
-            <!-- <div class="row m-3">
-              <div class="col-12 col-md-2 col-lg-4">
-                <mat-card class="example-card">
-                  <mat-card-title>Introduction to programming</mat-card-title>
-                  <mat-card-content>
-                    <p>{{ longText }}</p>
-                  </mat-card-content>
-                  <mat-divider inset></mat-divider>
-                  <mat-card-actions>
-                    <button mat-button color="warn" [matMenuTriggerFor]="menu">
-                      Actions
-                    </button>
-                  </mat-card-actions>
-                  <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Add resources</button>
-                    <button mat-menu-item>Edit</button>
-                    <button mat-menu-item>Delete</button>
-                  </mat-menu>
-                  
-                </mat-card>
+            <form [formGroup]="stageTwoFormGroup">
+              <div class="col-md-6 mt-4">
+                <label for="pix-upload">Upload Resources Here</label>
+                <input type="file" class="form-control mt-2" id="video-upload" (change)="onFileChange($event)">
               </div>
-            </div> -->
+
+              <div class="form-row">
+                <div class="col-12 mt-4">
+                  <label for="description" class="form-label">Resources Name</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add name here " formControlName="resourcesName" required></textarea>
+                </div>
+              </div>
+
+            </form>
 
 
-            
-<form [formGroup]="stageTwoFormGroup">
-  <div class="col-md-6 mt-4">
-    <label for="pix-upload">Upload Resources Here</label>
-    <input type="file" class="form-control mt-2" id="video-upload" (change)="onFileChange($event)">
-  </div>
-
-  <div class="form-row">
-    <div class="col-12 mt-4">
-      <label for="description" class="form-label">Resources Name</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add name here " formControlName="resourcesName" required></textarea>
-    </div>
-  </div>
-
-</form>
-
-
-</div>
-
+          </div>
+<!-- 
           <button mat-mini-fab class="m-3" style="background-color: rgb(255,90,44); color: #fff; width: 40px; height: 40px;">
             <mat-icon>add</mat-icon>
-          </button>
+          </button> -->
           
           
           <div class="mt-3">
@@ -106,10 +81,28 @@
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        <p>You are now done.</p>
+           
+        <div class="modules-card mt-2">
+
+          
+          <label id="example-radio-group-label">Pick how you want your students to access this resources</label>
+          <mat-radio-group aria-label="Select an option"> <br> <br>
+            <mat-radio-button value="1">Free</mat-radio-button>
+            <br> <br>
+            <mat-radio-button value="2" (click)="show = !show">Paid</mat-radio-button>
+            <br>
+            <div *ngIf="show">
+              <div class="col-md-6 mt-4">
+                <label>Input the Amount</label>
+                <input placeholder="Naira" type="number" class="form-control mt-2">
+              </div>
+            </div>
+          </mat-radio-group>
+        </div>
+
         <div>
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-button (click)="stepper.reset()">Submit</button>
         </div>
       </mat-step>
     </mat-stepper>

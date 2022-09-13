@@ -12,6 +12,7 @@ import { AddResourcesService} from '../services/add-resources.service'
   styleUrls: ['./add-course.component.css']
 })
 export class AddCourseComponent implements OnInit {
+  show = false;
 
   public courseCategories: Array<string> = ['Design', 'Development', 'Marketing', 'It and Software', 'Personal Development', 'Business', 'Photography', 'Music'];
 
@@ -25,6 +26,9 @@ export class AddCourseComponent implements OnInit {
   public errorOccurredMessage = '';
 
   public fileSrc = ''
+
+  favoriteSeason: string;
+  // seasons: string[] = ['Winter', 'Spring', 'Summer',];
 
   firstFormGroup = this._formBuilder.group({
     courseName: ['', Validators.required],
